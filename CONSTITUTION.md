@@ -4,11 +4,12 @@
 
 ---
 
-## 1. Team and Roles
+## 1. Team and Roles - 
+## 
 
-### Team Number
+### Team Number - #2
 
-### Team Name
+### Team Name - 
 
 _
 
@@ -16,10 +17,10 @@ _
 
 | Name | GitHub username | Preferred contact | Usual availability |
 |------|-----------------|-------------------|--------------------|
-|      |                 |                   |                    |
-|      |                 |                   |                    |
-|      |                 |                   |                    |
-|      |                 |                   |                    |
+|Emily C|emilyy3x|discord/number|Tuesday/Thursday afternoon, most weekends & ask|
+|Ashley C-Q|ash1eyv10|number/discord|ask, since it changes|
+|Evan K|evan-khanna-dev|number|ask, since it depends on the week|
+|Rithanya S|sarav2rx|                   |                    |
 
 ### Scrum Master
 
@@ -27,12 +28,20 @@ _
 
 **Does the role rotate?** *(e.g., rotates each sprint in the order listed above; or one person for the whole project)*
 
+Role will rotate. 
+
+Week 1 - Ashley C-Q
+Week 2 - Evan K
+Week 3 - Emily C
+Week 4 - Rithanya S
+Week 5 - Ashley C-Q (if needed)
+Week 6 - Evan K
 _
 
 ### Product Owner
 
 *Choose one team member who will interact with the instructor (stakeholder) to clarify and prioritize stories, and to collect new ones.*
-
+Evan K will be the Product Owner.
 _
 
 ### Other Responsibilities
@@ -40,6 +49,8 @@ _
 Who is responsible for maintaining the project board / backlog in good order? *(Scrum Master?)*
 
 Who is responsible for deploying the main branch to production to update GitHub pages?
+
+Ashley C-Q will update GitHub pages.
 
 ### Decision Making
 

@@ -30,12 +30,12 @@ _
 
 Role will rotate. 
 
-Week 1 - Ashley C-Q
-Week 2 - Evan K
-Week 3 - Emily C
-Week 4 - Rithanya S
-Week 5 - Ashley C-Q (if needed)
-Week 6 - Evan K
+Week 1 (Oct 25 to Nov 1) - Ashley C-Q
+Week 2 (Nov 2 to Nov 8) - Evan K
+Week 3 (Nov 9 to Nov 15)- Emily C
+Week 4 (Nov 16 to Nov 22)- Rithanya S
+Week 5 (Nov 23 to Nov 29)- Ashley C-Q (if needed)
+PRESENTATION Week 6 (Nov 30 to Dec 6)- Evan K
 _
 
 ### Product Owner

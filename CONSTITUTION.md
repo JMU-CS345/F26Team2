@@ -20,7 +20,7 @@ _
 |Emily C|emilyy3x|discord/number|Tuesday/Thursday afternoon, most weekends & ask|
 |Ashley C-Q|ash1eyv10|number/discord|ask, since it changes|
 |Evan K|evan-khanna-dev|number|ask, since it depends on the week|
-|Rithanya S|sarav2rx|                   |                    |
+|Rithanya S|sarav2rx|number|evenings after class|
 
 ### Scrum Master
 
@@ -50,7 +50,7 @@ Who is responsible for maintaining the project board / backlog in good order? *(
 
 Who is responsible for deploying the main branch to production to update GitHub pages?
 
-Ashley C-Q will update GitHub pages.
+Ashley C-Q will handle deployment for GitHub pages.
 
 ### Decision Making
 

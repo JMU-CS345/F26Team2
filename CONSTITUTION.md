@@ -4,12 +4,18 @@
 
 ---
 
-## 1. Team and Roles - 
-## 
+## 1. Team and Roles
+##  Development Team: 
+    Ashley C-Q
+    Evan K
+    Emily C 
+    Rithanya S
 
-### Team Number - #2
+### Team Number
+    #2
 
-### Team Name - 
+### Team Name
+    Team Two 
 
 _
 
@@ -24,7 +30,7 @@ _
 
 ### Scrum Master
 
-**Sprint 1 Scrum Master:** _
+**Sprint 1 Scrum Master:** 
 
 **Does the role rotate?** *(e.g., rotates each sprint in the order listed above; or one person for the whole project)*
 
@@ -48,6 +54,8 @@ _
 
 Who is responsible for maintaining the project board / backlog in good order? *(Scrum Master?)*
 
+The Scrum Master will maintain when it's their turn. Previous Scrum Master should update the new Scrum Master for the week on updates and to catch them up to date.
+
 Who is responsible for deploying the main branch to production to update GitHub pages?
 
 Ashley C-Q will handle deployment for GitHub pages.
@@ -55,6 +63,8 @@ Ashley C-Q will handle deployment for GitHub pages.
 ### Decision Making
 
 *(How do we decide things: consensus, majority vote, Scrum Master decides? What happens if we are deadlocked?)*
+
+Consensus. If deadlocked, we will integrate their opinion and try to find a way to apply it.
 
 _
 
@@ -88,36 +98,40 @@ _
 
 *A backlog item may be pulled into a sprint only when:*
 
-- [ ] it is written as a user story
-- [ ] it has acceptance criteria
-- [ ] it has an estimate
+- [Y] it is written as a user story
+- [Y] it has acceptance criteria
+- [Y] it has an estimate
 
 ### Definition of Done
 
 *An item is done only when:*
 
-- [ ] code is reviewed and approved by at least one teammate
-- [ ] all tests pass in CI
-- [ ] merged to `main`
-- [ ] works in the deployed build
-- [ ] the issue is closed
+- [Y] code is reviewed and approved by at least one teammate
+- [Y] all tests pass in CI
+- [N] merged to `main`
+- [N] works in the deployed build
+- [N] the issue is closed
 - [ ]
 
 ### Estimation
 
-**Method:** *(story points, t-shirt sizes, hours)*
+**Method:** Story points
+-> measures relative size
+-> effort (how long), complexity (how hard it is to get right),
+-> uncertainty (something you don't know)
 
-**Scale:** *(e.g., 1, 2, 3, 5, 8, 13)*
+**Scale:** 1, 2, 3, 5, 8, 13, ?
+-> 13 is a warning (split it)
+-> between two #'s? pick the larger one
+-> '?' means "can't estimate this yet" question/spike
 
 _
 
 ### Backlog and Board
 
-**Where the backlog lives:** *(e.g., GitHub Projects board, link here)*
+**Where the backlog lives:** *https://github.com/orgs/JMU-CS345/projects/13/views/1*
 
-**Board columns:** *(e.g., To Do → In Progress → In Review → Done)*
-
-_
+**Board columns:** To Do → In Progress → In Review → Done
 
 ---
 
@@ -125,26 +139,29 @@ _
 
 ### Primary Channel
 
-**Channel:** *(Discord, Slack, GroupMe, ...)*
+**Channel:** Discord and IMessages
 
-**Expected response time:** *(e.g., within 12 hours on weekdays)*
+**Expected response time:** Max: 6 hours
 
 ### What Goes Where
 
 *(What is discussed in the chat channel vs. in GitHub issues vs. in PR comments?)*
+*Channel:* Questions, Concerns
+*Github issues:* User stories, tasks
+*PR comments:* suggestions
 
 _
 
 ### Reporting Blockers or Falling Behind
 
 *(How and how early does a member tell the team they are stuck or behind?)*
-
+When they hit an issue they don't know how to proceed, a message should be sent right away.
 _
 
 ### Absences
 
 *(How much notice is required? How is the absent member's work covered?)*
-
+24 hours, a message/notice should be sent to the team. The team that is present will cover for the absent member by splitting the work.
 _
 
 ---
@@ -153,55 +170,59 @@ _
 
 ### Branch Naming
 
-**Format:** *(e.g., `type/issue-short-description`)*
+**Format:** type/issue-short-description
 
-**Allowed types:** *(e.g., `feature`, `fix`, `docs`, `refactor`, `test`, `chore`)*
+**Allowed types:** feature, fix, documents, refactor, test, chore
 
 **Examples:**
 
--
--
+- feature/customizing-appearance 
+- fix/damage-reduction
 
 ### Branch Protection on `main`
 
-- [ ] No direct pushes to `main`
-- [ ] Required approvals before merge: _
-- [ ] CI must pass before merge
-- [ ] Same protection on `production`
+- [Y] No direct pushes to `main`
+- [Y] Required approvals before merge: _
+- [Y] CI must pass before merge
+- [Y] Same protection on `production`
 
 ### Commit Messages
 
 *(Format and style, e.g., imperative mood: "Add rune puzzle validation". Do we follow Conventional Commits?)*
 
+Commit message should say the main gist of what is being committed.
+Format: Imperative mood: Add rune puzzle validation
+
 _
 
 ### Pull Requests
 
-**Maximum size:** *(e.g., aim for under 300 changed lines)*
+**Maximum size:** aim for under 300 changed lines
 
-**Description template:** *(e.g., What / Why / How to test / Screenshot)*
+**Description template:** What / Why / How to test / Screenshot
 
-**Linking issues:** *(e.g., every PR includes `Closes #N`)*
+**Linking issues:** every PR includes `Closes #N`
+-> 'Closes #N' means that the issue will close itself.
 
 _
 
 ### Code Review
 
-**Review turnaround:** *(e.g., within 24 hours of being requested)*
+**Review turnaround:** within 24 hours of being requested
 
-**Who reviews what:** *(e.g., any teammate; or a rotating assignment)*
+**Who reviews what:** any available teammate that has not worked on the code/method/function itself.
 
 _
 
 ### Merging
 
-**Merge style:** *(merge commit, squash and merge, or rebase and merge)*
+**Merge style:** 
+features/branches -> merge commit
+for committing to main -> squash and merge 
 
-**Who merges:** *(the author after approval, or the reviewer)*
+**Who merges:** the author after approval
 
-**After merge:** *(e.g., delete the branch)*
-
-_
+**After merge:** delete the branch
 
 ---
 
@@ -211,23 +232,23 @@ _
 
 | Kind | Convention | Example |
 |------|------------|---------|
-| Variables and functions | | |
-| Classes | | |
-| Constants | | |
-| Files | | |
-| Test files | | |
+| Variables and functions | Camel | lookAround |
+| Classes | UpperCase | PasswordLol |
+| Constants | All upper case | MERGE |
+| Files | UpperCase | HelloThere |
+| Test files | UpperTest | HelloThereTest |
 
 ### Formatting
 
-**Indentation:** *(2 spaces, 4 spaces, tabs)*
+**Indentation:** tabs
 
-**Semicolons:** *(always / never)*
+**Semicolons:** never
 
-**Quotes:** *(single / double)*
+**Quotes:** double
 
-**Maximum line length:** _
+**Maximum line length:** 80
 
-**Tools:** *(e.g., Prettier and ESLint, with config files committed to the repo)*
+**Tools:** Prettier
 
 _
 
@@ -238,7 +259,7 @@ _
 ```
 src/
   model/        (e.g., game logic, no p5 drawing calls)
-  view/         (e.g., drawing code)
+  view/         (e.g., drawing code) 
   controller/   (e.g., input handling)
 assets/
 spec/
@@ -248,20 +269,19 @@ spec/
 
 *(e.g., game logic never calls p5 drawing functions directly, so it can be unit tested)*
 
--
--
+Helper function should be implemented in case of needing to test the given logic.
 
 ### Comments and Documentation
 
 *(When are comments or JSDoc required?)*
 
-_
+JSDoc -> when things need clarification.
 
 ### Assets
 
-**File naming:** *(e.g., all lowercase, hyphens, no spaces)*
+**File naming:** no space, lowercase
 
-**Licensing and attribution:** *(Where do we record the source and license of art, sound, and fonts we did not make?)*
+**Licensing and attribution:** In a master document.
 
 _
 
@@ -271,23 +291,23 @@ _
 
 **Test framework:** Jasmine
 
-**Where tests live:** _
+**Where tests live:** In GitHub, in a file
 
-**What must have tests:** *(e.g., all model code; every bug fix gets a test that reproduces it; combat and puzzle rules)*
+**What must have tests:** every branch and line, full coverage
 
 _
 
 **Coverage expectations:** 90+%
 
-**Continuous integration:** *(What does GitHub Actions run on each PR?)*
+**Continuous integration:** verification, automated tests, checking code format, and checking if everything is probably linked.
 
 _
 
-**Rule for failing CI:** *(e.g., nothing merges while CI is red)*
+**Rule for failing CI:** nothing merges while CI is red
 
 _
 
-**Manual playtesting:** *(Who plays the build before each sprint review, and how are bugs reported?)*
+**Manual playtesting:** Someone who has not touched the code/written it. They should report it in a recorded Google Document. Where each time someone has reviewed, they should write what they've noticed that is not running correctly or not supposed to be there.
 
 _
 
@@ -295,29 +315,29 @@ _
 
 ## 7. Deployment
 
-**Where the game is deployed:** GitHub Pages, URL here
+**Where the game is deployed:** GitHub Pages, https://github.com/JMU-CS345/F26Team2/issues 
 
-**What triggers a deploy:** *(e.g., a release PR from `main` into `production`, opened by the Scrum Master after each sprint review)*
+**What triggers a deploy:** a release PR from `main` into `production`, opened by the Scrum Master after each sprint review
 
-**Who checks the deployed build, and when:** _
+**Who checks the deployed build, and when:** Any available team member, who has the least amount of involvement in the code.
 
 ---
 
 ## 8. AI Tool Usage
 
-**Allowed tools:** _
+**Allowed tools:** Claude, Gemini, and ChatGPT
 
-**Allowed uses:** *(e.g., code generation, tests, documentation, review)*
-
-_
-
-**Not allowed:** _
-
-**Disclosure:** *(e.g., note AI assistance in the PR description)*
+**Allowed uses:** tests, documentation, and errors seen that team member have not been able to see
 
 _
 
-**Responsibility:** *(e.g., whoever submits AI-generated code must understand it and is accountable for it)*
+**Not allowed:** generating code, if team member chooses to generate, they must understand accountable and needing to review it to the full extent.
+
+**Disclosure:** note AI assistance in the PR description
+
+_
+
+**Responsibility:** whoever submits AI-generated code must understand they will take accountable for it, no matter if the AI made a mistake
 
 _
 
@@ -327,13 +347,15 @@ _
 
 ### Expected Effort
 
-*(Hours per person per week.)*
+about 5 to 6 hours per week
 
 _
 
 ### Fair Contribution
 
 *(What counts as contributing, and how is it tracked? e.g., PRs merged, reviews done, story points completed.)*
+Contribution counts as: assisting when someone needs help, answering questions, 
+Tracking: will be tracked by using a Google Form rating how contribution is going, what should be brought up if something is going wrong, and what is going well.
 
 _
 
@@ -341,20 +363,27 @@ _
 
 *(What steps do we follow when there is a disagreement or a problem with a teammate?)*
 
-1. *(e.g., talk to the person directly)*
-2. *(e.g., raise it at the retrospective)*
-3. *(e.g., Scrum Master mediates)*
-4. *(e.g., escalate to the instructor)*
+1. talk to the person directly
+2. raise it at the retrospective
+3. Scrum Master mediates
+4. escalate to the instructor if needed
 
 ### Missed Commitments
 
 *(What happens when a member repeatedly misses commitments?)*
+If a member misses 2:
+1. talk to the person -> Find out why?
+2. raise it at the retrospective
+3. Scrum Master mediates
+4. escalate to instructor if it continues
 
 _
 
 ### Amending This Constitution
 
 *(How can this document be changed? e.g., proposed by PR, approved by team vote at a retrospective.)*
+
+approved by team vote
 
 _
 
@@ -366,7 +395,7 @@ _
 
 | GitHub name | Signature (type your name) | Date |
 |------|----------------------------|------|
-|      |                            |      |
+|ash1eyv10|Ashley C-Q|10/28/2026|
 |      |                            |      |
 |      |                            |      |
 |      |                            |      |

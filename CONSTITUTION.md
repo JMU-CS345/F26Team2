@@ -396,6 +396,6 @@ _
 | GitHub name | Signature (type your name) | Date |
 |------|----------------------------|------|
 |ash1eyv10|Ashley C-Q|10/28/2026|
-|      |                            |      |
+|emilyy3x|Emily C|10/28/2026|
 |      |                            |      |
 |      |                            |      |

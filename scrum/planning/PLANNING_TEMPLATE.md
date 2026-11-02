@@ -6,19 +6,20 @@
 
 ## 1. Meeting Details
 
-**Date:** _
+**Date:** 11/2/2026
 
-**Scrum Master:** _
+**Scrum Master:** Evan A. Khanna
 
-**Attendees:** _
+**Attendees:** Evan, Rithanya, Emily, Ashley
 
-**Absent:** _
+**Absent:** N/A
 
 ---
 
 ## 2. Sprint Goal
 
-*One or two sentences describing a playable outcome, not a list of tickets. e.g., "A player can create a character and enter the first dungeon."*
+Me and Emily can work on the setup page, Rithanya will work on the UI for the mage selection, and then Ashley
+will work on the character customization screen.
 
 _
 
@@ -26,17 +27,17 @@ _
 
 ## 3. Capacity and Velocity
 
-**Sprint dates:** _ to _
+**Sprint dates:** 11/2 to 11/9
 
-**Velocity last sprint (points completed):** _ *(Sprint 1: write "n/a")*
+**Velocity last sprint (points completed):** n/a *(Sprint 1: write "n/a")*
 
-**Average velocity so far:** _
+**Average velocity so far:** 0
 
-**Known absences or reduced availability this sprint:** _
+**Known absences or reduced availability this sprint:** None
 
-**Points committed this sprint:** _
+**Points committed this sprint:** 4
 
-**Why this commitment is realistic:** *(Compare it to your velocity and capacity. If you are committing more than last sprint's velocity, explain why.)*
+**Why this commitment is realistic:** It is because this is all UI and this also gives us a good taste of real P5.js usage. And also this gives us about 3 classes to work on this and the sprint review as well.
 
 _
 
@@ -46,13 +47,11 @@ _
 
 *Every item listed here must meet the Definition of Ready in your constitution. Items should be taken from the top of the product backlog in priority order. If you skipped a higher-priority item, explain why under "Notes".*
 
-| Issue # | User story | Estimate | Owner | Ready? |
-|---------|------------|----------|-------|--------|
-|         |            |          |       | [ ]    |
-|         |            |          |       | [ ]    |
-|         |            |          |       | [ ]    |
-|         |            |          |       | [ ]    |
-|         |            |          |       | [ ]    |
+| Issue # | User story                          | Estimate        | Owner         | Ready? |
+|---------|-------------------------------------|-----------------|---------------|--------|
+|  #10    |     Customization of mage class     |     8 hours     |   Rithanya    | [ ]    |
+|  #17    |     Mage Design Customization       |     10 hours    |   Ashley      | [ ]    |
+|  #24    |     Start Up Screen                 |                 |               | [ ]    |
 
 **Total points:** _
 

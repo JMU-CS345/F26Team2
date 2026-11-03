@@ -18,7 +18,7 @@
 
 ## 2. Sprint Goal
 
-When the game is opened, a title screen will appear with options to see the credits and also start playing the game where they can then go into picking their wizard faction (fire, ice, psyc) and then customize different parts of their chosen wizard faction.
+When the game is opened, a title screen will appear with options to see the credits and also start playing the game where they can then go into picking their wizard faction (fire, ice, psyc) and then customize their character.
 
 _
 

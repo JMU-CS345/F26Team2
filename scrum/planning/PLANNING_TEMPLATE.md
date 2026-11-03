@@ -18,8 +18,7 @@
 
 ## 2. Sprint Goal
 
-Me and Emily can work on the setup page, Rithanya will work on the UI for the mage selection, and then Ashley
-will work on the character customization screen.
+When the game is opened, a title screen will appear with options to see the credits and also start playing the game where they can then go into picking their wizard faction (fire, ice, psyc) and then customize different parts of their chosen wizard faction.
 
 _
 

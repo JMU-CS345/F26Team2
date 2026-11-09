@@ -1,11 +1,16 @@
-let font;
+let mageFont;
 let firePic;
 let icePic;
 let mindPic;
 
 let selectedMage = "";
-let particles = [];
-let colors = ['#de0000', '#800080', '#83f0ff'];
+
+function selectMage(mage) {
+    selectedMage = mage;
+}
+
+let mageParticles = [];
+let mageColors = ['#de0000', '#800080', '#83f0ff'];
 let numOfParticles = 250;
 
 let fireButton;
@@ -15,13 +20,13 @@ let mindButton;
 async function setup() {
   createCanvas(600, 400);
 
-  font = await loadFont("assets/fonts/Redaction35-Regular.ttf");
+  mageFont = await loadFont("assets/fonts/Redaction35-Regular.ttf");
   firePic = await loadImage("assets/images/fire_symbol-32x.PNG");
   icePic = await loadImage("assets/images/ice_symbol-32x.PNG");
   mindPic = await loadImage("assets/images/psych_symbol-64x.PNG");
 
   for (let i = 0; i < numOfParticles; i++) {
-    particles.push(new Particle());
+    mageParticles.push(new MageParticle());
   }
   
   fireButton = createButton("Select Fire");
@@ -32,7 +37,7 @@ async function setup() {
   fireButton.style("border", "2px solid white");
   
   fireButton.mousePressed(function() {
-    selectedMage = "Fire";
+    selectMage = "Fire";
   });
 
   iceButton = createButton("Select Ice");
@@ -43,7 +48,7 @@ async function setup() {
   iceButton.style("border", "2px solid white");
   
   iceButton.mousePressed(function() {
-    selectedMage = "Ice";
+    selectMage = "Ice";
   });
 
   mindButton = createButton("Select Psychic");
@@ -54,21 +59,21 @@ async function setup() {
   mindButton.style("border", "2px solid white");
   
   mindButton.mousePressed(function() {
-    selectedMage = "Psychic";
+    selectMage = "Psychic";
   });
 }
 
 function draw() {
   background(0);
 
-  for (let i = 0; i < particles.length; i++) {
-    particles[i].move();
-    particles[i].display();
-    particles[i].checkEdges();
+  for (let i = 0; i < mageParticles.length; i++) {
+    mageParticles[i].move();
+    mageParticles[i].display();
+    mageParticles[i].checkEdges();
   }
 
   textAlign(CENTER, CENTER);
-  textFont(font);
+  textFont(mageFont);
 
   fill(255);
   textSize(40);
@@ -107,14 +112,14 @@ function draw() {
   text("Selected: " + selectedMage, 300, 370);
 }
 
-class Particle {
+class MageParticle {
   constructor() {
     this.x = random(width);
     this.y = random(height);
     this.size = random(0.5, 1);
     this.xSpeed = random(-0.3, 0.3);
     this.ySpeed = random(-0.3, 0.3);
-    this.hex = random(colors);
+    this.hex = random(mageColors);
   }
 
   move() {

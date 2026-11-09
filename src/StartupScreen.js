@@ -4,8 +4,8 @@ let font;
 let playBtn, creditsBtn, backBtn;
 
 function preload() {
-  logo = loadImage("assets/logo.png");
-  font = loadFont("Redaction35-Regular.ttf");
+  logo = loadImage("assets/images/logo.png");
+  font = loadFont("assets/font/Redaction35-Regular.ttf");
 }
 
 function setup() {
@@ -18,6 +18,7 @@ function setup() {
   playBtn.size(240, 80);
   playBtn.style("background", "#3C3C3C");
   playBtn.style("color", "#FFFFFF");
+  playBtn.style('font-family', 'Redaction35');
   playBtn.style("font-size", "32px");
   playBtn.style("border", "none");
   playBtn.style("border-radius", "10px");
@@ -29,6 +30,7 @@ function setup() {
   creditsBtn.size(240, 80);
   creditsBtn.style("background", "#3C3C3C");
   creditsBtn.style("color", "#FFFFFF");
+  creditsBtn.style('font-family', 'Redaction35');
   creditsBtn.style("font-size", "32px");
   creditsBtn.style("border", "none");
   creditsBtn.style("border-radius", "10px");

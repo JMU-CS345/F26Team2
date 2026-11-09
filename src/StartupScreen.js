@@ -71,7 +71,6 @@ function drawCredits() {
 
 function drawGame() { /* teammates' code goes here */ }
 
-// Always change screens with this, never state = "..."
 function setState(next) {
   state = next;
   playBtn.hide();

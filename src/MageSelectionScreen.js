@@ -15,10 +15,10 @@ let mindButton;
 async function setup() {
   createCanvas(600, 400);
 
-  font = await loadFont("Redaction35-Regular.ttf");
-  firePic = await loadImage('fire_symbol-32x.PNG');
-  icePic = await loadImage('ice_symbol-32x.PNG');
-  mindPic = await loadImage('psych_symbol-64x.PNG');
+  font = await loadFont("assets/fonts/Redaction35-Regular.ttf");
+  firePic = await loadImage("assets/images/fire_symbol-32x.PNG");
+  icePic = await loadImage("assets/images/ice_symbol-32x.PNG");
+  mindPic = await loadImage("assets/images/psych_symbol-64x.PNG");
 
   for (let i = 0; i < numOfParticles; i++) {
     particles.push(new Particle());

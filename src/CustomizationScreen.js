@@ -16,7 +16,7 @@ let particles = [];
 let colors = ['#de0000', '#800080', '#83f0ff'];
 
 async function setup() {
-    font = await loadFont("Redaction35-Regular.ttf");
+    font = await loadFont("assets/fonts/Redaction35-Regular.ttf");
     createCanvas(600, 400);
     // skin tones buttons
     skintone1 = createButton('');

@@ -24,6 +24,7 @@ function setup() {
   setupStart();
   setupClass();
   setupCustom();
+  goTo("start");
 }
 
 function draw() {
@@ -37,64 +38,64 @@ function draw() {
       p.display();
       p.checkEdges();
     }
-
     if (screen === "class") {
       drawClass();
     } else if (screen == "custom") {
       drawCustom();
     }
   }
+}
 
-  function goTo(name) {
-    screen = name;
-    hideStart();
-    hideClass();
-    hideCustom();
+function goTo(name) {
+  screen = name;
+  hideStart();
+  hideClass();
+  hideCustom();
 
-    if (name === "start") {
-      showStart();
-    } else if (name === "class") {
-      showClass();
-    } else if (name === "custom") {
-      showCustom();
-    }
-  }
-
-  class Particle {
-    constructor() {
-        this.x = random(width);
-        this.y = random(height);
-        this.size = random(0.5, 1);
-        this.xSpeed = random(-0.3, 0.3);
-        this.ySpeed = random(-0.3, 0.3);
-
-        this.hex = random(colors);
-    }
-
-    move() {
-        this.x += this.xSpeed;
-        this.y += this.ySpeed;
-    }
-
-    display() {
-        let glow = color(this.hex);
-
-        stroke(glow);
-        strokeWeight(this.size * 4);
-
-        fill(red(glow), green(glow), blue(glow));
-        ellipse(this.x, this.y, this.size);
-
-        noStroke();
-        fill(this.hex);
-        ellipse(this.x, this.y, this.size);
-    }
-
-    checkEdges() {
-        if (this.x < 0) this.x = width;
-        if (this.x > width) this.x = 0;
-        if (this.y < 0) this.y = height;
-        if (this.y > height) this.y = 0;
-    }
+  if (name === "start") {
+    showStart();
+  } else if (name === "class") {
+    showClass();
+  } else if (name === "custom") {
+    showCustom();
   }
 }
+
+class Particle {
+  constructor() {
+    this.x = random(width);
+    this.y = random(height);
+    this.size = random(0.5, 1);
+    this.xSpeed = random(-0.3, 0.3);
+    this.ySpeed = random(-0.3, 0.3);
+
+    this.hex = random(colors);
+  }
+
+  move() {
+    this.x += this.xSpeed;
+    this.y += this.ySpeed;
+  }
+
+  display() {
+    let glow = color(this.hex);
+
+    stroke(glow);
+    strokeWeight(this.size * 4);
+
+    fill(red(glow), green(glow), blue(glow));
+    ellipse(this.x, this.y, this.size);
+
+    noStroke();
+    fill(this.hex);
+    ellipse(this.x, this.y, this.size);
+  }
+
+  checkEdges() {
+    if (this.x < 0) this.x = width;
+    if (this.x > width) this.x = 0;
+    if (this.y < 0) this.y = height;
+    if (this.y > height) this.y = 0;
+  }
+}
+

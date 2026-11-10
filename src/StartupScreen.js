@@ -18,9 +18,9 @@ function setupStart() {
   creditsBtn = makeStartBtn("Credits", height * 0.55 + 65);
   backBtn = makeStartBtn("Back", height * 0.8);
 
-  playBtn.mousePressed(() => setState("class"));
-  creditsBtn.mousePressed(() => setState("credits"));
-  backBtn.mousePressed(() => setState("menu"));
+  playBtn.mousePressed(() => goTo("class"));
+  creditsBtn.mousePressed(() => goTo("credits"));
+  backBtn.mousePressed(() => goTo("menu"));
 }
 
 function drawStart() {
@@ -44,7 +44,7 @@ function setStartMode(mode) {
   startMode = mode;
   hideStart();
 
-  if (mode === "menu") { playBtn.show(); creditsBtn(); }
+  if (mode === "menu") { playBtn.show(); creditsBtn.show(); }
   else backBtn.show();
 }
 

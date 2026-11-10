@@ -27,16 +27,25 @@ function makeOutfitBtn(x, onClick) {
     return b;
 }
 
+function setTone(n) { toneSelected = n; }
+function setHair(n) { hairSelected = n; }
+function setOutfit(n) { outfitSelected = n; }
+
 function setupCustom()  {
     // skin tones buttons
-    skintone1 = makeSwatch(380, 100, "#F1C5A9", () => { toneSelected = 1; })
-    skintone2 = makeSwatch(440, 100, "#E2A180", () => { toneSelected = 2; })
-    skintone3 = makeSwatch(500, 100, "#7E5331", () => { toneSelected = 3; })
+    skintone1 = makeSwatch(380, 100, "#F1C5A9", () => setTone(1));
+    skintone2 = makeSwatch(440, 100, "#E2A180", () => setTone(2));
+    skintone3 = makeSwatch(500, 100, "#7E5331", () => setTone(3));
 
     // hair color buttons
-    hair1 = makeSwatch(380, 160, "#CFB695", () => { hairSelected = 1; })
-    hair2 = makeSwatch(440, 160, "#8A6351", () => { hairSelected = 2; })
-    hair3 = makeSwatch(500, 160, "#100C07", () => { hairSelected = 3; })
+    hair1 = makeSwatch(380, 160, "#CFB695", () => setHair(1));
+    hair2 = makeSwatch(440, 160, "#8A6351", () => setHair(2));
+    hair3 = makeSwatch(500, 160, "#100C07", () => setHair(3));
+
+    // outfit buttons
+    outfit1 = makeOutfitBtn(280, () => setOutfit(1));
+    outfit2 = makeOutfitBtn(370, () => setOutfit(2));
+    outfit3 = makeOutfitBtn(460, () => setOutfit(3));
 
     // play button
     play = createButton('PLAY');
@@ -93,10 +102,10 @@ function setGradient(x, y, w, h, c1, c2) {
     }
 }
 
-function customButton() {
+function customButtons() {
     return [skintone1, skintone2, skintone3, hair1, hair2, hair3,
             outfit1, outfit2, outfit3, play];
 }
 
 function showCustom() { customButtons().forEach(b => b.show()); }
-function hairCustom() { customButtons().forEach(b => b.hide()); }
+function hideCustom() { customButtons().forEach(b => b.hide()); }

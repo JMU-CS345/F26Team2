@@ -24,7 +24,7 @@ function drawClass() {
   imageMode(CORNER);
 
   fill(255);
-  noStoke();  
+  noStroke();  
   textSize(40);
   text("Pick Your Mage", 310, 70);
 
@@ -59,4 +59,4 @@ function drawClass() {
 }
 
 function showClass() { fireBtn.show(); iceBtn.show(); mindBtn.show(); }
-function hideClass() { fireBtn.hide(); iceBtn.show(); mindBtn.hide(); }
+function hideClass() { fireBtn.hide(); iceBtn.hide(); mindBtn.hide(); }

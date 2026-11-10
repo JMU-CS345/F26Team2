@@ -1,84 +1,52 @@
-let state = "start"; // "start" | "playing" | "credits"
-let logo;
-let font;
+let startMode = "menu"; // "start" | "playing" | "credits"
 let playBtn, creditsBtn, backBtn;
 
-function preload() {
-  logo = loadImage("assets/images/logo.png");
-  font = loadFont("assets/font/Redaction35-Regular.ttf");
+function makeStartBtn(label, y) {
+  let b = createButton(label);
+  b.size(160, 50);
+  b.style('background', '#3C3C3C');
+  b.style('color', '#FFFFFF');
+  b.style('font-family', 'Redaction35-Regular');
+  b.style('font-size', '32px');
+  b.style('cursor', 'pointer');
+  b.position(width / 2 - 80, y);
+  return b;
 }
 
-function setup() {
-  createCanvas(windowWidth, windowHeight);
-  textAlign(CENTER, CENTER);
-  imageMode(CENTER);
-  textFont(font);
+function setupStart() {
+  playBtn = makeStartBtn("Play", height * 0.55);
+  creditsBtn = makeStartBtn("Credits", height * 0.55 + 65);
+  backBtn = makeStartBtn("Back", height * 0.8);
 
-  playBtn = createButton("Play");
-  playBtn.size(240, 80);
-  playBtn.style("background", "#3C3C3C");
-  playBtn.style("color", "#FFFFFF");
-  playBtn.style('font-family', 'Redaction35');
-  playBtn.style("font-size", "32px");
-  playBtn.style("border", "none");
-  playBtn.style("border-radius", "10px");
-  playBtn.style("cursor", "pointer");
-  playBtn.position(width / 2 - 110, height * 0.55 - 30);
-  playBtn.mousePressed(() => setState("playing"));
-
-  creditsBtn = createButton("Credits");
-  creditsBtn.size(240, 80);
-  creditsBtn.style("background", "#3C3C3C");
-  creditsBtn.style("color", "#FFFFFF");
-  creditsBtn.style('font-family', 'Redaction35');
-  creditsBtn.style("font-size", "32px");
-  creditsBtn.style("border", "none");
-  creditsBtn.style("border-radius", "10px");
-  creditsBtn.style("cursor", "pointer");
-  creditsBtn.position(width / 2 - 110, height * 0.68 - 30);
+  playBtn.mousePressed(() => setState("class"));
   creditsBtn.mousePressed(() => setState("credits"));
-
-  backBtn = createButton("Back");
-  backBtn.size(240, 80);
-  backBtn.style("background", "#3C3C3C");
-  backBtn.style("color", "#FFFFFF");
-  backBtn.style("font-size", "32px");
-  backBtn.style("border", "none");
-  backBtn.style("border-radius", "10px");
-  backBtn.style("cursor", "pointer");
-  backBtn.position(width / 2 - 110, height * 0.8 - 30);
-  backBtn.mousePressed(() => setState("start"));
-
-  setState("start");
-}
-
-function draw() {
-  background(20);
-  if (state === "start") drawStart();
-  else if (state === "playing") drawGame();
-  else if (state === "credits") drawCredits();
+  backBtn.mousePressed(() => setState("menu"));
 }
 
 function drawStart() {
-  image(logo, width / 2, height * 0.3);
+  imageMode(CENTER);
+  if (startMode === "menu") {
+    image(logo, width / 2, height * 0.33);
+  } else {
+    drawCredits();
+  }
 }
 
 function drawCredits() {
   fill(255);
-  textSize(48);
+  textSize(40);
   text("Credits", width / 2, height * 0.2);
-  textSize(28);
+  textSize(24);
   text("Names go here", width / 2, height * 0.4);
 }
 
-function drawGame() { /* teammates' code goes here */ }
+function setStartMode(mode) {
+  startMode = mode;
+  hideStart();
 
-function setState(next) {
-  state = next;
-  playBtn.hide();
-  creditsBtn.hide();
-  backBtn.hide();
-
-  if (state === "start") { playBtn.show(); creditsBtn.show(); }
-  if (state === "credits") backBtn.show();
+  if (mode === "menu") { playBtn.show(); creditsBtn(); }
+  else backBtn.show();
 }
+
+function showStart() { setStartMode("menu"); }
+function hideStart() { playBtn.hide(); creditsBtn.hide(); backBtn.hide(); }

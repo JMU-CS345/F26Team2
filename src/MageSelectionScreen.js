@@ -1,81 +1,30 @@
-let mageFont;
-let firePic;
-let icePic;
-let mindPic;
+let fireBtn, iceBtn, mindBtn;
 
-let selectedMage = "";
+function makeMageBtn(label, x, mage) {
+  let b = createButton(label);
+  b.position(x, 330);
+  b.style("background-color", "black");
+  b.style("color", "white");
+  b.style("border", "2px solid white");
 
-function selectMage(mage) {
-    selectedMage = mage;
+  b.mousePressed(() => {
+    chosenClass = mage;
+    goTo("custom");
+  })
+  return b;
 }
 
-let mageParticles = [];
-let mageColors = ['#de0000', '#800080', '#83f0ff'];
-let numOfParticles = 250;
-
-let fireButton;
-let iceButton;
-let mindButton;
-
-async function setup() {
-  createCanvas(600, 400);
-
-  mageFont = await loadFont("assets/fonts/Redaction35-Regular.ttf");
-  firePic = await loadImage("assets/images/fire_symbol-32x.PNG");
-  icePic = await loadImage("assets/images/ice_symbol-32x.PNG");
-  mindPic = await loadImage("assets/images/psych_symbol-64x.PNG");
-
-  for (let i = 0; i < numOfParticles; i++) {
-    mageParticles.push(new MageParticle());
-  }
-  
-  fireButton = createButton("Select Fire");
-  fireButton.position(60, 330);
-  
-  fireButton.style("background-color", "black");
-  fireButton.style("color", "white");
-  fireButton.style("border", "2px solid white");
-  
-  fireButton.mousePressed(function() {
-    selectMage = "Fire";
-  });
-
-  iceButton = createButton("Select Ice");
-  iceButton.position(260, 330);
-
-  iceButton.style("background-color", "black");
-  iceButton.style("color", "white");
-  iceButton.style("border", "2px solid white");
-  
-  iceButton.mousePressed(function() {
-    selectMage = "Ice";
-  });
-
-  mindButton = createButton("Select Psychic");
-  mindButton.position(440, 330);
-  
-  mindButton.style("background-color", "black");
-  mindButton.style("color", "white");
-  mindButton.style("border", "2px solid white");
-  
-  mindButton.mousePressed(function() {
-    selectMage = "Psychic";
-  });
+function setupClass() {
+  fireBtn = makeMageBtn("Select Fire", 60, "Fire");
+  iceBtn = makeMageBtn("Select Ice", 260, "Ice");
+  mindBtn = makeMageBtn("Select Psychic", 440, "Psychic");
 }
 
-function draw() {
-  background(0);
-
-  for (let i = 0; i < mageParticles.length; i++) {
-    mageParticles[i].move();
-    mageParticles[i].display();
-    mageParticles[i].checkEdges();
-  }
-
-  textAlign(CENTER, CENTER);
-  textFont(mageFont);
+function drawClass() {
+  imageMode(CORNER);
 
   fill(255);
+  noStoke();  
   textSize(40);
   text("Pick Your Mage", 310, 70);
 
@@ -107,43 +56,7 @@ function draw() {
   text("PSYCHIC", 495, 195);
   image(mindPic, 455, 220, 80, 80);
 
-  fill(255);
-  textSize(20);
-  text("Selected: " + selectedMage, 300, 370);
 }
 
-class MageParticle {
-  constructor() {
-    this.x = random(width);
-    this.y = random(height);
-    this.size = random(0.5, 1);
-    this.xSpeed = random(-0.3, 0.3);
-    this.ySpeed = random(-0.3, 0.3);
-    this.hex = random(mageColors);
-  }
-
-  move() {
-    this.x += this.xSpeed;
-    this.y += this.ySpeed;
-  }
-
-  display() {
-    let glow = color(this.hex);
-
-    stroke(glow);
-    strokeWeight(this.size * 4);
-    fill(red(glow), green(glow), blue(glow));
-    ellipse(this.x, this.y, this.size);
-
-    noStroke();
-    fill(this.hex);
-    ellipse(this.x, this.y, this.size);
-  }
-
-  checkEdges() {
-    if (this.x < 0) this.x = width;
-    if (this.x > width) this.x = 0;
-    if (this.y < 0) this.y = height;
-    if (this.y > height) this.y = 0;
-  }
-}
+function showClass() { fireBtn.show(); iceBtn.show(); mindBtn.show(); }
+function hideClass() { fireBtn.hide(); iceBtn.show(); mindBtn.hide(); }

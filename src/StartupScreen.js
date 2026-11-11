@@ -26,7 +26,9 @@ function setupStart() {
 function drawStart() {
   imageMode(CENTER);
   if (startMode === "menu") {
-    image(logo, width / 2, height * 0.33);
+    let w = 350;
+    let h = w * logo.height / logo.width;
+    image(logo, width / 2, height * 0.3, w, h);
   } else {
     drawCredits();
   }

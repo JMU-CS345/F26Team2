@@ -28,7 +28,7 @@ function drawStart() {
   if (startMode === "menu") {
     let w = 480;
     let h = w * logo.height / logo.width;
-    image(logo, width / 2, height * 0.3, w, h);
+    image(logo, width / 2, h / 2 + 5, w, h);
   } else {
     drawCredits();
   }

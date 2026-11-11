@@ -28,21 +28,18 @@ function setup() {
 }
 
 function draw() {
-  if (screen === "start") {
-    background(20);
-    drawStart();
-  } else {
-    background(0);
-    for (let p of particles) {
+  background(0);
+  for (let p of particles) {
       p.move();
       p.display();
       p.checkEdges();
-    }
-    if (screen === "class") {
-      drawClass();
-    } else if (screen == "custom") {
-      drawCustom();
-    }
+  }
+  if (screen === "start") {
+    drawStart();
+  } else if (screen === "class") {
+    drawClass();
+  } else {
+    drawCustom();
   }
 }
 

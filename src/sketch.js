@@ -1,6 +1,6 @@
 let screen = "start";
-let chosenClass = "";
 let logo, font, firePic, icePic, mindPic;
+let playerImg;
 let particles = [];
 let colors = ['#de0000', '#800080', '#83f0ff'];
 
@@ -10,6 +10,7 @@ function preload() {
   firePic = loadImage("assets/images/fire_symbol-32x.PNG");
   icePic = loadImage("assets/images/ice_symbol-32x.PNG");
   mindPic = loadImage("assets/images/psych_symbol-64x.PNG");
+  playerImg = loadImage("assets/character/BasePlayerSprite.png");
 }
 
 function setup() {

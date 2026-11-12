@@ -2,9 +2,6 @@ let hair1, hair2, hair3;
 let skintone1, skintone2, skintone3;
 let outfit1, outfit2, outfit3;
 let play;
-let toneSelected = 1;
-let hairSelected = 1;
-let outfitSelected = 1;
 
 // function to make buttons
 function makeSwatch(x, y, hex, onClick) {
@@ -27,9 +24,9 @@ function makeOutfitBtn(x, onClick) {
     return b;
 }
 
-function setTone(n) { toneSelected = n; }
-function setHair(n) { hairSelected = n; }
-function setOutfit(n) { outfitSelected = n; }
+function setTone(n) { player.tone = n; }
+function setHair(n) { player.hair = n; }
+function setOutfit(n) { player.outfit = n; }
 
 function setupCustom()  {
     // skin tones buttons
@@ -71,6 +68,9 @@ function drawCustom() {
     // character display box
     fill(255);
     rect(90, 110, 120, 200);
+
+    // character
+    drawPlayer(90, 110, 120, 200);
 
     // title
     textSize(40);

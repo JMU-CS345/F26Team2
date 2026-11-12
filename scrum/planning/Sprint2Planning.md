@@ -49,8 +49,8 @@ _
 |   #26   |As a user, I want to start the game and move smoothly between screens before gameplay.|3hrs, 3pts|Ashley| [Y]    |
 |    #6   |As a gamer, I want to be able to purchase items from shops, so that I can use them in the dungeon.|10hrs, 8pts|Rithanya| [Y]    |
 |    #3   |As a gamer, I want to return to a peaceful town after clearing a dungeon, so that I have a safe space to buy spells, gear, and heal before continuing.|8.5hrs, 8pts|Evan| [Y]    |
-|    #17  |I want to customize my character’s appearance so that I can create a unique wizard identity that reflects my personal preference or chosen mage type.|9hrs|Ashley & Emily, 8pts| [Y]    |
-|    #28   |As a user, I want to be able to see the Town when I'm walking around the Town and see the shop menus when I'm buying either potions or weapons.|8hrs|Emily, 8pts| [Y]    |
+|    #17  |I want to customize my character’s appearance so that I can create a unique wizard identity that reflects my personal preference or chosen mage type.|9hrs, 8pts|Ashley & Emily| [Y]    |
+|    #28   |As a user, I want to be able to see the Town when I'm walking around the Town and see the shop menus when I'm buying either potions or weapons.|8hrs, 8pts|Emily| [Y]    |
 
 **Total points:** 35
 
@@ -66,7 +66,7 @@ _
 
 - [ ] All three starting screen files should be merged into the correct branch (<0.5hr)
 - [ ] Buttons that direct the screen to the next screen should be functional (Starting screen --> Class selection --> Mage customization)(2hrs)
-- [ ] Buttons and screens should be tested for proper screen sizes, proper cropping and placement, and proper transitions (1hr)
+- [ ] Buttons and screens should be tested for proper screen sizes, proper cropping and placement, and proper transitions. (1hr)
 
 ### Issue #6: *Items Can Be Bought From Shops*
 
@@ -74,7 +74,7 @@ _
 - [ ] Create buttons to select items and create buttons for purchasing an item for both shops (3hrs)
 - [ ] Create a dialogue box (1hr)
 - [ ] Write dialogue for the NPC shop owner, which informs the user about the description of each item (1hr)
-- [ ] Test and review the code (1hr)
+- [ ] Test and review the code by testing using the currency system and test purchasing items, seeing if it takes money out and that the character gains the item in their inventory. (1hr)
 
 ### Issue #3: *How Towns Should Work*
 
@@ -89,7 +89,7 @@ _
 - [ ] Draw the different outfits, in different colors depending on the mage class selected (4hrs)
 - [ ] Recolor the character in the different skin and hair colors (1hr)
 - [ ] Import the character and layer on the different outfits depending on what is selected (3hrs)
-- [ ] Test different outfits, skin tone, and hair color combinations with different mage classes (2hr)
+- [ ] Test different outfits, skin tone, and hair color combinations with different mage classes. Make sure that the customization choices are saved onto the character. (2hr)
 
 ### Issue #28: *Menu and Town Art*
 

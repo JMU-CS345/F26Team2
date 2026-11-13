@@ -18,7 +18,7 @@ function preload() {
     hairImgs.push(loadImage("assets/character/Hair" + i + ".png"));
     toneImgs.push(loadImage("assets/character/Tone" + i + ".png"));
     
-    for (let m of ["Fire", "Ice", "Psychic"]) {
+    for (let m of ["Fire", "Ice","Psychic"]) {
       outfitImgs[m].push(loadImage("assets/character/" + m + "Outfit" + i + ".png"));
     }
   } 

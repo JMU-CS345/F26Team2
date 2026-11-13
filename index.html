@@ -13,5 +13,24 @@
     <script src="src/CustomizationScreen.js"></script>;
     <script src="src/StartupScreen.js"></script>;
     <script src="src/Currency.js"></script>;
+    <script src="src/Overworld.js"></script>
+    <script>
+      // DEBUG: press "O" to jump straight to the overworld.
+      (function () {
+        const originalDraw = window.draw;
+        window.draw = function () {
+          if (screen === "overworld") {
+            drawOverworld();
+          } else {
+            originalDraw();
+          }
+        };
+        window.addEventListener("keydown", function (e) {
+          if (e.key === "o" || e.key === "O") {
+            goTo("overworld"); // hides all other screens' UI
+          }
+        });
+      })();
+    </script>
   </body>
 </html>

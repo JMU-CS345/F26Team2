@@ -1,6 +1,6 @@
 let screen = "start";
 let chosenClass = "";
-let logo, font, firePic, icePic, mindPic;
+let logo, font, firePic, icePic, mindPic, potionShopPic;
 let particles = [];
 let colors = ['#de0000', '#800080', '#83f0ff'];
 
@@ -10,6 +10,9 @@ function preload() {
   firePic = loadImage("assets/images/fire_symbol-32x.PNG");
   icePic = loadImage("assets/images/ice_symbol-32x.PNG");
   mindPic = loadImage("assets/images/psych_symbol-64x.PNG");
+
+  // Town Assets
+  potionShopPic = loadImage("assets/images/potion_shop.png");
 }
 
 function setup() {

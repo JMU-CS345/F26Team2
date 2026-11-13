@@ -8,7 +8,7 @@ function makeMageBtn(label, x, mage) {
   b.style("border", "2px solid white");
 
   b.mousePressed(() => {
-    chosenClass = mage;
+    player.mage = mage;
     goTo("custom");
   })
   return b;

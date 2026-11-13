@@ -1,6 +1,7 @@
 let screen = "start";
-let chosenClass = "";
-let logo, font, firePic, icePic, mindPic;
+let logo, font, firePic, icePic, mindPic, playerImg, backDrop;
+let hairImgs = [], toneImgs = [];
+let outfitImgs = { Fire: [], Ice: [], Psychic: [] };
 let particles = [];
 let colors = ['#de0000', '#800080', '#83f0ff'];
 
@@ -10,6 +11,17 @@ function preload() {
   firePic = loadImage("assets/images/fire_symbol-32x.PNG");
   icePic = loadImage("assets/images/ice_symbol-32x.PNG");
   mindPic = loadImage("assets/images/psych_symbol-64x.PNG");
+  playerImg = loadImage("assets/character/BasePlayerSprite.png");
+  backDrop = loadImage("assets/images/custom_back_drop.png");
+
+  for (let i = 1; i <= 3; i++) {
+    hairImgs.push(loadImage("assets/character/Hair" + i + ".png"));
+    toneImgs.push(loadImage("assets/character/Tone" + i + ".png"));
+    
+    for (let m of ["Fire", "Ice","Psychic"]) {
+      outfitImgs[m].push(loadImage("assets/character/" + m + "Outfit" + i + ".png"));
+    }
+  } 
 }
 
 function setup() {

@@ -20,8 +20,36 @@ function makeOutfitBtn(x, onClick) {
     b.position(x, 218);
     b.style('width', '60px');
     b.style('height', '80px');
+    b.style("background-color", "transparent");
+    b.style("border", "none");
     b.mousePressed(onClick);
     return b;
+}
+
+function drawOutfitChoices() {
+    push();
+    imageMode(CORNER);
+    let xs = [280, 370, 460];
+    let list = [];
+    
+    if (player.mage === "Fire") list = outfitImgs.Fire;
+    else if (player.mage === "Ice") list = outfitImgs.Ice;
+    else if (player.mage === "Psychic") list = outfitImgs.Psychic;
+
+    noFill();
+    stroke(225);
+    strokeWeight(2);
+
+    for (let i = 0; i < list.length; i++) {
+        image(backDrop, xs[i], 218, 60, 80);
+        if (list[i]) {
+            // to scale to the right size 
+            let scale = min(60 / list[i].width, 80 / list[i].height);
+            image(list[i], xs[i], 226, list[i].width * scale, list[i].height * scale);
+        }
+        rect(xs[i], 218, 60, 80);
+    }
+    pop();
 }
 
 function setTone(n) { player.tone = n; }
@@ -66,17 +94,26 @@ function drawCustom() {
     setGradient(53, 70, 500, 300, c1, c2);
 
     // character display box
-    fill(255);
+    push();
+    imageMode(CORNER);
+    image(backDrop, 90, 110, 120, 200);
+    noFill();
+    stroke(255);
+    strokeWeight(3);
     rect(90, 110, 120, 200);
+    pop();
 
     // character
-    drawPlayer(90, 120);
+    drawPlayer(87, 140);
+
+    // outfits
+    drawOutfitChoices();
 
     // title
     textSize(40);
     textAlign(CENTER, CENTER);
     fill(255);
-    text("Customize Your Character", 305, 50);
+    text("Customize Your Character", 305, 45);
 
     // title for skin tone
     textSize(20);

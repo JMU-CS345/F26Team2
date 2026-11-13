@@ -70,7 +70,7 @@ function drawCustom() {
     rect(90, 110, 120, 200);
 
     // character
-    drawPlayer(90, 110);
+    drawPlayer(90, 120);
 
     // title
     textSize(40);

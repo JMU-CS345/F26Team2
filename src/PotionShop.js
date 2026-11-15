@@ -24,8 +24,9 @@ function drawPotions() {
   noStroke();
   textSize(38);
   textStyle(BOLD);
-  textAlign(LEFT);
+  textAlign(LEFT, BASELINE);   // title sits on a baseline just above the panel
   text("POTIONS", 90, 120);
+  textAlign(LEFT, CENTER);     // back to what the rest of the shop text uses
 
   
   fill(245, 217, 142);

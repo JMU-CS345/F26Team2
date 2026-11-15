@@ -24,8 +24,9 @@ function drawWeapons() {
   noStroke();
   textSize(38);
   textStyle(BOLD);
-  textAlign(CENTER);
+  textAlign(CENTER, BASELINE);   // title sits on a baseline just above the panel
   text("WEAPONS", 435, 122);
+  textAlign(CENTER, CENTER);     // back to what the rest of the shop text uses
 
   
   fill(245, 217, 142);

@@ -1,6 +1,7 @@
 let screen = "start";
 let chosenClass = "";
 let logo, font, firePic, icePic, mindPic, potionShopPic, playerImg, backDrop;
+let potionBg, weaponBg, potionPlayer, weaponPlayer;
 let hairImgs = [], toneImgs = [];
 let outfitImgs = { Fire: [], Ice: [], Psychic: [] };
 let particles = [];
@@ -17,6 +18,12 @@ function preload() {
   potionShopPic = loadImage("assets/images/potion_shop.png");
   playerImg = loadImage("assets/character/BasePlayerSprite.png");
   backDrop = loadImage("assets/images/custom_back_drop.png");
+
+  // Shop assets (placeholders until dedicated art exists)
+  potionBg = loadImage("assets/images/woodd.jpg");
+  weaponBg = potionBg;
+  potionPlayer = playerImg;
+  weaponPlayer = playerImg;
 
   for (let i = 1; i <= 3; i++) {
     hairImgs.push(loadImage("assets/character/Hair" + i + ".png"));
@@ -40,6 +47,8 @@ function setup() {
   setupStart();
   setupClass();
   setupCustom();
+  setupPotions();
+  setupWeapons();
   goTo("start");
 }
 
@@ -54,8 +63,23 @@ function draw() {
     drawStart();
   } else if (screen === "class") {
     drawClass();
+  } else if (screen == "overworld") {
+    drawOverworld();
+  } else if (screen === "potionshop") {
+    drawPotions();
+  } else if (screen === "weaponshop") {
+    drawWeapons();
   } else {
     drawCustom();
+  }
+}
+
+function keyPressed() {
+  if (screen === "overworld" && (key === "e" || key === "E")) {
+    let shop = nearbyShop();
+    if (shop) goTo(shop);
+  } else if (keyCode === ESCAPE && (screen === "potionshop" || screen === "weaponshop")) {
+    goTo("overworld");
   }
 }
 
@@ -64,6 +88,8 @@ function goTo(name) {
   hideStart();
   hideClass();
   hideCustom();
+  hidePotions();
+  hideWeapons();
 
   if (name === "start") {
     showStart();
@@ -71,6 +97,10 @@ function goTo(name) {
     showClass();
   } else if (name === "custom") {
     showCustom();
+  } else if (name === "potionshop") {
+    showPotions();
+  } else if (name === "weaponshop") {
+    showWeapons();
   }
 }
 

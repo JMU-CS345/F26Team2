@@ -34,6 +34,21 @@
           }
         });
       })();
+      (function () {
+        const originalDraw = window.draw;
+        window.draw = function () {
+          if (screen === "potionshop") {
+            drawPotions();
+          } else {
+            originalDraw();
+          }
+        };
+        window.addEventListener("keydown", function (e) {
+          if (e.key === "p" || e.key === "p") {
+            goTo("potionshop"); // hides all other screens' UI
+          }
+        });
+      })();
     </script>
   </body>
 </html>

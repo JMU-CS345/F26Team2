@@ -1,6 +1,8 @@
 let screen = "start";
 let chosenClass = "";
-let logo, font, firePic, icePic, mindPic, potionShopPic;
+let logo, font, firePic, icePic, mindPic, potionShopPic, playerImg, backDrop;
+let hairImgs = [], toneImgs = [];
+let outfitImgs = { Fire: [], Ice: [], Psychic: [] };
 let particles = [];
 let colors = ['#de0000', '#800080', '#83f0ff'];
 
@@ -13,6 +15,17 @@ function preload() {
 
   // Town Assets
   potionShopPic = loadImage("assets/images/potion_shop.png");
+  playerImg = loadImage("assets/character/BasePlayerSprite.png");
+  backDrop = loadImage("assets/images/custom_back_drop.png");
+
+  for (let i = 1; i <= 3; i++) {
+    hairImgs.push(loadImage("assets/character/Hair" + i + ".png"));
+    toneImgs.push(loadImage("assets/character/Tone" + i + ".png"));
+    
+    for (let m of ["Fire", "Ice","Psychic"]) {
+      outfitImgs[m].push(loadImage("assets/character/" + m + "Outfit" + i + ".png"));
+    }
+  } 
 }
 
 function setup() {

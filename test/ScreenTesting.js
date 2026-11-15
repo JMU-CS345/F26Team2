@@ -50,14 +50,14 @@ describe("start screen", () => {
 describe("customize choices", () => {
   it("saves the skin tone", () => {
     setTone(3);
-    expect(toneSelected).toBe(3);
+    expect(player.tone).toBe(3);
   });
   it("saves the hair color", () => {
     setHair(2);
-    expect(hairSelected).toBe(2);
+    expect(player.hair).toBe(2);
   });
   it("saves the outfit", () => {
     setOutfit(2);
-    expect(outfitSelected).toBe(2);
+    expect(player.outfit).toBe(2);
   });
 });

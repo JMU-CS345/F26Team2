@@ -242,7 +242,7 @@ for committing to main -> squash and merge
 
 **Indentation:** tabs
 
-**Semicolons:** never
+**Semicolons:** always
 
 **Quotes:** double
 

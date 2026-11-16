@@ -2,20 +2,34 @@
 // (Canvas is created once in sketch.js: createCanvas(600, 400))
 
 function drawOverworld() {
-  background(220);
+  const sx = 750, sy = 0, sw = 450, sh = 345;   // wall region in wall.png
+  const s = 0.5;                                // scale
+  background(bg);
   strokeWeight(0);
-  fill(0, 176, 80);
-  rect(15, 175, 150, 150);
-  fill(255, 0, 0);
-  rect(10, 10, 241, 75);
-  rect(350, 10, 240, 75);
+  push();
+  imageMode(CENTER);
+  push();
+  translate(10, 10);   // wall's center
+  scale(-1, 1);        // flip horizontally in place
+  image(wall, -110, 85, sw * s, sh * s, sx, sy, sw, sh);
+  pop();
+  image(wall, 490, 95, sw * s, sh * s, sx, sy, sw, sh);
+  pop();
+  push();
+  imageMode(CENTER);
+  image(weaponShopPic, 100, 230, weaponShopPic.width * 0.6, weaponShopPic.height * 0.6);
+  pop();
+  push();
+  imageMode(CENTER);
+  image(weaponShopNPC, 100, 230, weaponShopNPC.width * 0.6, weaponShopNPC.height * 0.6);
+  pop();
   noFill();
   stroke(0);
   strokeWeight(20);
   rect(0, 0, 600, 400);
   push();
   imageMode(CENTER);   // (479, 185) is the sprite's center
-  image(potionShopPic, 479, 185, potionShopPic.width * 0.6, potionShopPic.height * 0.6);
+  image(potionShopPic, 479, 205, potionShopPic.width * 0.6, potionShopPic.height * 0.6);
   pop();
 
   moveDummy();

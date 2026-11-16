@@ -16,8 +16,12 @@ function preload() {
 
   // Town Assets
   potionShopPic = loadImage("assets/images/potion_shop.png");
+  weaponShopPic = loadImage("assets/images/weapon_shop.png");
+  weaponShopNPC = loadImage("assets/images/weapon_shop_npc.png");
   playerImg = loadImage("assets/character/BasePlayerSprite.png");
   backDrop = loadImage("assets/images/custom_back_drop.png");
+  bg = loadImage("assets/images/bg.png");
+  wall = loadImage("assets/images/wall.png");
 
   // Shop assets (placeholders until dedicated art exists)
   potionBg = loadImage("assets/images/woodd.jpg");

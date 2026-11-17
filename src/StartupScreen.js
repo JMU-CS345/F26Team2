@@ -24,6 +24,7 @@ function setupStart() {
 }
 
 function drawStart() {
+  push();   // keep imageMode(CENTER) from leaking into other screens
   imageMode(CENTER);
   if (startMode === "menu") {
     let w = 480;
@@ -32,6 +33,7 @@ function drawStart() {
   } else {
     drawCredits();
   }
+  pop();
 }
 
 function drawCredits() {

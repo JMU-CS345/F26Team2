@@ -32,3 +32,9 @@ function drawDummy() {
     circle(dummy.x, dummy.y, dummy.r * 2);
     pop();
 }
+
+function savePlayerData(data) {
+    const jsonString = JSON.stringify(data);
+
+    sessionStorage.setItem("Player_Appearance", jsonString);
+}

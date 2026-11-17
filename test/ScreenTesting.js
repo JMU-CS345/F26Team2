@@ -1,6 +1,6 @@
 describe("goTo", () => {
   beforeEach(() => {
-    ["hideStart", "hideClass", "hideCustom",
+    ["hideStart", "hideClass", "hideCustom", "hidePotions", "hideWeapons",
      "showStart", "showClass", "showCustom"]
       .forEach(name => spyOn(window, name));
   });

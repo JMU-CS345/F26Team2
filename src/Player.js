@@ -12,3 +12,9 @@ function drawPlayer(x, y) {
     }
     pop();
 }
+
+function savePlayerData(data) {
+    const jsonString = JSON.stringify(data);
+
+    sessionStorage.setItem("Player_Appearance", jsonString);
+}

@@ -81,6 +81,12 @@ function setupCustom()  {
     play.style('width', '80px');
     play.style('height', '50px');
     play.style('background-color', '#000000');
+
+    play.mousePressed(() => {
+        screen = "overworld";
+        play.hide();
+        hideCustom();
+    })
 }
 
 function drawCustom() {

@@ -35,7 +35,7 @@ function drawPotions() {
   rect(95, 125, 160, 175);
 
   
-  image(potionPlayer, 100, 130, 150, 165);
+  image(potionPlayer, 77, 130);
 
   
   fill(245, 217, 142);
@@ -56,17 +56,17 @@ function drawPotions() {
   textSize(13);
   textStyle(BOLD);
 
-  text("Heal Potion", 290, 122);
-  text("Mana Potion", 290, 185);
-  text("Strength Potion", 290, 248);
+  text("Heal Potion", 290, 117);
+  text("Mana Potion", 290, 180);
+  text("Strength Potion", 290, 243);
 
   
   textSize(12);
   textStyle(NORMAL);
 
-  text("15 coins", 290, 145);
-  text("35 coins", 290, 208);
-  text("25 coins", 290, 271);
+  text("15 coins", 290, 140);
+  text("35 coins", 290, 202);
+  text("25 coins", 290, 265);
 
   
   fill(234, 198, 111);
@@ -79,14 +79,14 @@ function drawPotions() {
   noStroke();
   textSize(15);
   textStyle(BOLD);
-  text("DESCRIPTION", 110, 308);
+  text("DESCRIPTION", 110, 295);
 
   fill(65, 40, 43);
   textSize(12);
   textStyle(NORMAL);
 
-  text("Welcome to the Potion Shop! Explore our collection of Health, Mana", 110, 325);
-  text("and Strength potions to improve your abilities and prepare for battle!", 110, 338);
+  text("Welcome to the Potion Shop! Explore our collection of Health, Mana", 110, 315);
+  text("and Strength potions to improve your abilities and prepare for battle!", 110, 333);
 }
 
 function makePotionBuyButton(x, y, potionName) {

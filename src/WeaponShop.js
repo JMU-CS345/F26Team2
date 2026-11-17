@@ -80,15 +80,15 @@ function drawWeapons() {
   textAlign(LEFT);
   textSize(15);
   textStyle(BOLD);
-  text("DESCRIPTION", 110, 325);
+  text("DESCRIPTION", 110, 315);
 
   
   fill(65, 40, 43);
   textSize(11);
   textStyle(NORMAL);
 
-  text("Welcome to the Weapons Shop! Choose from our collection of Swords,", 110, 341);
-  text("Daggers and Maces to improve your abilities and prepare for battle!", 107, 355);
+  text("Welcome to the Weapons Shop! Choose from our collection of Swords,", 110, 335);
+  text("Daggers and Maces to improve your abilities and prepare for battle!", 110, 353);
 }
 
 function makeWeaponBuyButton(x, y, weaponName) {

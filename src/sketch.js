@@ -1,7 +1,7 @@
 let screen = "start";
 let chosenClass = "";
 let logo, font, firePic, icePic, mindPic, potionShopPic, playerImg, backDrop;
-let potionBg, weaponBg, potionPlayer, weaponPlayer;
+let potionBg, weaponBg, potionPlayer, weaponPlayer, potionNPC;
 let hairImgs = [], toneImgs = [];
 let outfitImgs = { Fire: [], Ice: [], Psychic: [] };
 let particles = [];
@@ -25,8 +25,9 @@ function preload() {
 
   // Shop assets (placeholders until dedicated art exists)
   potionBg = loadImage("assets/images/woodd.jpg");
+  potionNPC = loadImage("assets/images/PotionShopNPC.png")
   weaponBg = potionBg;
-  potionPlayer = playerImg;
+  potionPlayer = potionNPC;
   weaponPlayer = playerImg;
 
   for (let i = 1; i <= 3; i++) {
@@ -76,6 +77,10 @@ function draw() {
   } else {
     drawCustom();
   }
+
+  if (COIN_SCREENS.includes(screen)) {
+    drawCoins();
+  }
 }
 
 function keyPressed() {
@@ -105,6 +110,11 @@ function goTo(name) {
     showPotions();
   } else if (name === "weaponshop") {
     showWeapons();
+  } else if (name === "overworld") {
+    const savedPlayer = sessionStorage.getItem("Player_Appearance");
+    if (savedPlayer && player) {
+      Object.assign(player, JSON.parse(savedPlayer));
+    }
   }
 }
 

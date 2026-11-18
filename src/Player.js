@@ -14,7 +14,7 @@ function drawPlayer(x, y) {
 }
 
 // Super simple placeholder player for the overworld: a circle moved with WASD / arrow keys.
-let dummy = { x: 300, y: 200, r: 10, speed: 3 };
+let dummy = { x: 260, y: 300, r: 10, speed: 3 };
 
 function moveDummy() {
     if (keyIsDown(LEFT_ARROW) || keyIsDown(65)) dummy.x -= dummy.speed;   // A
@@ -26,10 +26,15 @@ function moveDummy() {
 }
 
 function drawDummy() {
+    if (!player.mage) {
+        player.mage = chosenClass;
+    }
+
     push();
-    noStroke();
-    fill(80, 120, 255);
-    circle(dummy.x, dummy.y, dummy.r * 2);
+    translate(dummy.x, dummy.y);
+    scale(0.65);
+    imageMode(CENTER);
+    drawPlayer(0, 0);
     pop();
 }
 

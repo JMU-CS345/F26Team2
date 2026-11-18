@@ -1,7 +1,9 @@
 let screen = "start";
 let chosenClass = "";
 let logo, font, firePic, icePic, mindPic, potionShopPic, playerImg, backDrop;
-let potionBg, weaponBg, potionPlayer, weaponPlayer;
+let potionBg, weaponBg, potionPlayer, weaponPlayer, potionNPC, weaponNPC;
+let strengthIcon, healIcon, manaIcon;
+let daggerIcon, maceIcon, swordIcon, coinIcon;
 let hairImgs = [], toneImgs = [];
 let outfitImgs = { Fire: [], Ice: [], Psychic: [] };
 let particles = [];
@@ -22,12 +24,21 @@ function preload() {
   backDrop = loadImage("assets/images/custom_back_drop.png");
   bg = loadImage("assets/images/bg.png");
   wall = loadImage("assets/images/wall.png");
+  coinIcon = loadImage("assets/images/Coin.png");
 
-  // Shop assets (placeholders until dedicated art exists)
+  // Shop assets 
   potionBg = loadImage("assets/images/woodd.jpg");
+  potionNPC = loadImage("assets/images/PotionShopNPC.png");
+  weaponNPC = loadImage("assets/images/WeaponNPC.png");
   weaponBg = potionBg;
-  potionPlayer = playerImg;
-  weaponPlayer = playerImg;
+  potionPlayer = potionNPC;
+  weaponPlayer = weaponNPC;
+  strengthIcon = loadImage("assets/images/StrengthPotion.png");
+  manaIcon = loadImage("assets/images/ManaPotion.png");
+  healIcon = loadImage("assets/images/HealPotion.png");
+  daggerIcon = loadImage("assets/images/DaggerIcon.png");
+  maceIcon = loadImage("assets/images/MaceIcon.png");
+  swordIcon = loadImage("assets/images/SwordIcon.png");
 
   for (let i = 1; i <= 3; i++) {
     hairImgs.push(loadImage("assets/character/Hair" + i + ".png"));
@@ -76,6 +87,10 @@ function draw() {
   } else {
     drawCustom();
   }
+
+  if (COIN_SCREENS.includes(screen)) {
+    drawCoins();
+  }
 }
 
 function keyPressed() {
@@ -105,6 +120,11 @@ function goTo(name) {
     showPotions();
   } else if (name === "weaponshop") {
     showWeapons();
+  } else if (name === "overworld") {
+    const savedPlayer = sessionStorage.getItem("Player_Appearance");
+    if (savedPlayer && player) {
+      Object.assign(player, JSON.parse(savedPlayer));
+    }
   }
 }
 

@@ -1,6 +1,6 @@
 let coins = 100;
 const DEATH_PEN = 0.3;
-const COIN_SCREENS = ["town", "dungeon"];
+const COIN_SCREENS = ["overworld", "potionshop", "weaponshop"];
 
 // when user collects coins 
 function addCoins(n) {
@@ -29,8 +29,12 @@ function drawCoins() {
     fill(255, 215, 0);
     textSize(20);
     textAlign(LEFT, TOP);
-    text("Coins: " + coins, 15, 15);
-    textAlign(CENTER, CENTER);
+    text("" + coins, 65, 34);
     pop();
-    if (COIN_SCREENS.includes(screen)) drawCoins();
+
+    push();
+    translate(20, 20);
+    scale(0.75);
+    image(coinIcon, 0, 0);
+    pop();
 }

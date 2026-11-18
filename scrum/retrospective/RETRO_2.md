@@ -6,13 +6,13 @@
 
 ## 1. Meeting Details
 
-**Date:** _
+**Date:** 11/18/2026
 
-**Facilitator:** _
+**Facilitator:** Rithanya Saravanan.
 
-**Attendees:** _
+**Attendees:** Emily, Evan, Ashley, Rithanya 
 
-**Absent:** _
+**Absent:** N/A
 
 ---
 
@@ -22,8 +22,8 @@
 
 | Action item | Owner | Done? | Did it help? |
 |-------------|-------|-------|--------------|
-|             |       |       |              |
-|             |       |       |              |
+|Standard Design Style Doc and create a shared Google Drive assets folder|Emily|Yes | Yes. It made communication easier, clarified the design, and helped the team work more smoothly |
+| Member Check-ins reminders | Scrum Master | Yes |Yes. Reminders through Discord helped everyone stay on track, complete their tasks, and avoid falling behind.              |
 
 ---
 
@@ -31,13 +31,13 @@
 
 *Use these to ground the discussion in evidence.*
 
-**Points committed / completed:** _ / _
+**Points committed / completed:** 35/27
 
-**PRs merged:** _
+**PRs merged:** 7
 
-**CI runs failed / total:** _ / _ *(In your repo's **Actions** tab, count the runs from this sprint's dates. Use the **Status** filter to find the failed ones.)*
+**CI runs failed / total:** 2/ 21 *(In your repo's **Actions** tab, count the runs from this sprint's dates. Use the **Status** filter to find the failed ones.)*
 
-**Stories carried over:** _
+**Stories carried over:** 1 , Issue #6: Items Can Be Bought From Shops.
 
 ---
 
@@ -49,20 +49,19 @@
 
 ### What went well
 
--
--
--
+-Communication improved a lot compared to the previous sprint. Regular Discord check ins helped everyone stay updated and know what they were responsible for.
+-The shared Design Style Document and Google Drive assets folder made it easier to clarify designs, share resources, and keep the game visually good.
 
 ### What did not go well
 
--
--
--
+-The shop purchasing functionality was not completed, so 1 story being carried over.
+-The final integration and connecting of everyone's work did not have one clear assigned person responsible for coordinating it, making it harder to bring all the separate parts together.
+
 
 ### What puzzled us or what we want to try
 
--
--
+-Assign someone for the final integration and make sure everyone's work connects properly.
+-Have clear instructions for individual tasks, especially when one task depends on another, so team members know what they can work on independently and what needs to be completed first.
 
 ---
 
@@ -70,15 +69,15 @@
 
 *Pick the most important problem from above and ask "why?" until you reach something the team can change.*
 
-**Problem:** _
+**Problem:** Connecting everyone's work together at the end of the sprint was difficult.
 
-**Why?** _
+**Why?** Many features depended on other team members completing their parts first.
 
-**Why?** _
+**Why?** Tasks like the town artwork, town implementation, shops, and currency had to be completed in a certain order.
 
-**Why?** _
+**Why?** We did not have one clearly assigned person responsible for doing  the final integration and making sure all the parts connected.
 
-**Root cause:** _
+**Root cause:** We needed clearer task dependencies and someone responsible for the final integration of everyone's work.
 
 ---
 
@@ -88,9 +87,9 @@
 
 | Action item | Owner | How we will know it worked |
 |-------------|-------|----------------------------|
-|             |       |                            |
-|             |       |                            |
-|             |       |                            |
+| Assign one team member responsible for the final integration and make sure everyone's work connects| Scrum Master| All completed features are connected and working together before the sprint ends. |
+|Communicate about task dependencies and decide which tasks need to be completed first. | Scrum Master |
+Team members know which tasks they depend on, which helps tasks being delayed.|
 
 ---
 
@@ -98,20 +97,20 @@
 
 *Did this retrospective show that a rule in CONSTITUTION.md isn't working? If so, propose the change here and make it through a pull request. If not, explain why no change is needed. (Sprint 4: write "n/a")*
 
-**Proposed change:** *(or "none")*
+**Proposed change:** *(or "none")* None
 
-**Pull request:** *(link, or "none")*
+**Pull request:** *(link, or "none")* None
 
-**If no change is needed, why not?** *(Explain why the current rules are working, citing something from this sprint.)*
+**If no change is needed, why not?** *(Explain why the current rules are working, citing something from this sprint.)* Our current rules are working well. The problems we faced can be improved through better planning, communication without changing the Constitution.
 
 ---
 
 ## 8. Checklist
 
-- [ ] Every member contributed observations
-- [ ] Last sprint's action items reviewed
-- [ ] A root cause identified
-- [ ] Action items have owners and success measures (Sprint 4: n/a)
-- [ ] Action items added to the board or next planning report (Sprint 4: n/a)
-- [ ] Constitution change proposed through a pull request, or the reason none is needed explained (Sprint 4: n/a)
-- [ ] Report committed to `scrum/retrospective/` via pull request by 11:59 p.m. on the day of the retrospective
+- [Y] Every member contributed observations
+- [Y] Last sprint's action items reviewed
+- [Y] A root cause identified
+- [Y] Action items have owners and success measures (Sprint 4: n/a)
+- [Y] Action items added to the board or next planning report (Sprint 4: n/a)
+- [Y] Constitution change proposed through a pull request, or the reason none is needed explained (Sprint 4: n/a)
+- [Y] Report committed to `scrum/retrospective/` via pull request by 11:59 p.m. on the day of the retrospective

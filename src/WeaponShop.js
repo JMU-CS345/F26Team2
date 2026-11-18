@@ -47,17 +47,28 @@ function drawWeapons() {
   textSize(13);
   textStyle(BOLD);
 
-  text("Sword", 115, 127);
-  text("Dagger", 115, 190);
-  text("Mace", 115, 253);
+  text("Sword", 180, 120);
+  text("Dagger", 180, 183);
+  text("Mace", 180, 246);
+  push();
+  translate(20, 20);
+  scale(0.95);
+  image(swordIcon, 95, 85);
+  pop();
+  image(daggerIcon, 115, 155);
+  push();
+  translate(20, 20);
+  scale(0.85);
+  image(maceIcon, 102, 245);
+  pop();
 
   
   textSize(12);
   textStyle(NORMAL);
 
-  text("40 coins", 115, 149);
-  text("20 coins", 115, 212);
-  text("50 coins", 115, 275);
+  text("40 coins", 180, 142);
+  text("20 coins", 180, 205);
+  text("50 coins", 180, 267);
 
   
   fill(245, 217, 142);
@@ -66,7 +77,7 @@ function drawWeapons() {
   rect(345, 125, 160, 175);
 
   
-  image(weaponPlayer, 350, 130, 150, 165);
+  image(weaponPlayer, 327, 135);
 
 
   fill(234, 198, 111);
@@ -87,7 +98,7 @@ function drawWeapons() {
   textSize(11);
   textStyle(NORMAL);
 
-  text("Welcome to the Weapons Shop! Choose from our collection of Swords,", 110, 335);
+  text("Welcome to the Weapons Shop! Choose from our collection of Swords,", 110, 336);
   text("Daggers and Maces to improve your abilities and prepare for battle!", 110, 353);
 }
 

@@ -56,17 +56,20 @@ function drawPotions() {
   textSize(13);
   textStyle(BOLD);
 
-  text("Heal Potion", 290, 117);
-  text("Mana Potion", 290, 180);
-  text("Strength Potion", 290, 243);
+  text("Heal Potion", 327, 117);
+  text("Mana Potion", 327, 180);
+  text("Strength Potion", 327, 243);
+  image(healIcon, 270, 97);
+  image(manaIcon, 270, 162);
+  image(strengthIcon, 270, 225);
 
   
   textSize(12);
   textStyle(NORMAL);
 
-  text("15 coins", 290, 140);
-  text("35 coins", 290, 202);
-  text("25 coins", 290, 265);
+  text("15 coins", 327, 140);
+  text("35 coins", 327, 202);
+  text("25 coins", 327, 265);
 
   
   fill(234, 198, 111);

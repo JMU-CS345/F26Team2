@@ -29,6 +29,12 @@ function drawCoins() {
     fill(255, 215, 0);
     textSize(20);
     textAlign(LEFT, TOP);
-    text("Coins: " + coins, 25, 25);
+    text("" + coins, 65, 34);
+    pop();
+
+    push();
+    translate(20, 20);
+    scale(0.75);
+    image(coinIcon, 0, 0);
     pop();
 }

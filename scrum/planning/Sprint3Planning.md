@@ -1,4 +1,4 @@
-# Sprint Planning Report: Sprint _
+# Sprint Planning Report: Sprint 3
 
 *Copy this file into `scrum/planning/` using your team's naming format. Fill in every field. Replace the italic guidance with your team's information.*
 

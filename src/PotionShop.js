@@ -5,9 +5,9 @@ let buyPotionButton3;
 
 function setupPotions() {
   
-  buyPotionButton1 = makePotionBuyButton(425, 115, "Heal Potion");
-  buyPotionButton2 = makePotionBuyButton(425, 178, "Mana Potion");
-  buyPotionButton3 = makePotionBuyButton(425, 241, "Strength Potion");
+  buyPotionButton1 = makePotionBuyButton(425, 115, "Heal Potion", 15);
+  buyPotionButton2 = makePotionBuyButton(425, 178, "Mana Potion", 35);
+  buyPotionButton3 = makePotionBuyButton(425, 241, "Strength Potion", 25);
 }
 
 function drawPotions() {
@@ -92,7 +92,7 @@ function drawPotions() {
   text("and Strength potions to improve your abilities and prepare for battle!", 110, 333);
 }
 
-function makePotionBuyButton(x, y, potionName) {
+function makePotionBuyButton(x, y, potionName, price) {
   let button = createButton("BUY");
 
   button.position(x, y);
@@ -101,7 +101,21 @@ function makePotionBuyButton(x, y, potionName) {
   button.style("border", "2px solid #4b232b");
 
   button.mousePressed(() => {
-    console.log(potionName + " selected!");
+    if (spendCoins(price)) {
+      // place in users inventory
+      return null;
+    } else {
+      button.html("NOT ENOUGH");
+      button.style("font-size", '11.5px');
+      button.position(x - 30, y + 10);
+      button.style("background-color", "#8b0000");
+      setTimeout(() => {
+        button.html("BUY");
+        button.position(x, y);
+        button.style("font-size", "13.5px");
+        button.style("background-color", "#783747");
+      }, 1000);
+    }
   });
 
   return button;

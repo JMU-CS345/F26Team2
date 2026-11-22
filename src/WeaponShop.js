@@ -5,9 +5,9 @@ let buyWeaponButton2;
 let buyWeaponButton3;
 
 function setupWeapons() {
-  buyWeaponButton1 = makeWeaponBuyButton(270, 123, "Sword");
-  buyWeaponButton2 = makeWeaponBuyButton(270, 186, "Dagger");
-  buyWeaponButton3 = makeWeaponBuyButton(270, 249, "Mace");
+  buyWeaponButton1 = makeWeaponBuyButton(270, 123, "Sword", 40);
+  buyWeaponButton2 = makeWeaponBuyButton(270, 186, "Dagger", 20);
+  buyWeaponButton3 = makeWeaponBuyButton(270, 249, "Mace", 50);
 }
 
 function drawWeapons() {
@@ -102,7 +102,7 @@ function drawWeapons() {
   text("Daggers and Maces to improve your abilities and prepare for battle!", 110, 353);
 }
 
-function makeWeaponBuyButton(x, y, weaponName) {
+function makeWeaponBuyButton(x, y, weaponName, price) {
   let button = createButton("BUY");
 
   button.position(x, y);
@@ -111,7 +111,23 @@ function makeWeaponBuyButton(x, y, weaponName) {
   button.style("border", "2px solid #4b232b");
 
   button.mousePressed(() => {
-    console.log(weaponName + " selected!");
+    if (spendCoins(price)) {
+      // should be placed in users inventory
+      button.attribute('disabled', '');
+      button.html("OWNED");
+      button.position(x - 20, y);
+    } else {
+      button.html("NOT ENOUGH");
+      button.style("font-size", "11.5px");
+      button.position(x - 43, y);
+      button.style("background-color", "#8b0000");
+      setTimeout(() => {
+        button.html("BUY");
+        button.position(x, y);
+        button.style("font-size", "13.5px");
+        button.style("background-color", "#783747");
+      }, 1000);
+    }
   });
 
   return button;
